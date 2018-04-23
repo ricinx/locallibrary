@@ -26,7 +26,7 @@ SECRET_KEY = 'uy(=j=0@fhyjmz$h12%p_8$nfonw#%cnry21nh+5c_4ij+61ze'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+LOGIN_REDIRECT_URL = '/locallibrary/'
 
 # Application definition
 
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'locallibrary.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
